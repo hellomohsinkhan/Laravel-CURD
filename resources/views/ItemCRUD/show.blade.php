@@ -1,0 +1,51 @@
+@extends('layouts.default')
+ 
+
+@section('content')
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h2> Show Item</h2>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-primary" href="{{ route('itemCRUD.index') }}"> Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Brand Name:</strong>
+                {{ $item->brand_name }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Model Name:</strong>
+                {{ $item->model_name }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Price:</strong>
+                {{ $item->price }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Description:</strong>
+                {{ $item->description }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Image:</strong>
+                <img id="blah" src="{{URL::to('/')}}/images/{{$item->image}}" alt="your image" width="150"/>
+            </div>
+        </div>
+
+
+    </div>
+
+
+@endsection
